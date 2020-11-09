@@ -1,4 +1,5 @@
 import express, {Request, Response} from "express"
+import main from "./index"
 
 const app = express();
 const port = 4000;
@@ -10,7 +11,11 @@ app.get("/", (req: Request, res: Response) :void => {
     res.render("index");
 });
 
-app.set("title", "Product Finder");
+app.get("/behaviours", (req: Request, res: Response) :void => {
+  res.send(main());
+});
+
+app.set("title", "Feedback Tool");
 app.set("view engine", "pug");
 app.set("views", "./out/views");
 

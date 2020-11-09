@@ -1,6 +1,6 @@
 import Behaviours from "../models/behaviours"
 
-export default function getData() {
+export default function getData() :object {
   const deliveryGroup = new Behaviours(1,
     "Proactively monitor CM capacity through transparent planning of our work and horizon scanning to anticipate demand so that we can flag up resourcing concerns before they arise and ensure change roles are sufficiently provided on projects", 
     "Support my team members with empathy, building an environment of psychological safety where it is safe to speak out and to be challenged so that we build a team of trusted colleagues where we can experiment with new ideas and grow both as individuals and a team", 
@@ -22,5 +22,5 @@ export default function getData() {
 //     BehaviourObjects[BehaviourObjects.id] = Behaviours;
 //   }
 
-  return deliveryGroup;
+  return deliveryGroup.returnObject();
 }

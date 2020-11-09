@@ -34,7 +34,7 @@ export default class Behaviours {
     this.outsideTD3 = outsideTD3
   }
 
-  toString(): string {
+  returnString() :string {
     return `
     Team Behaviour 1: ${this.withinTeam1}
     Team Behaviour 2: ${this.withinTeam2}
@@ -46,6 +46,20 @@ export default class Behaviours {
     Outside TD Behaviour 2: ${this.outsideTD2}
     Outside TD Behaviour 3: ${this.outsideTD3}
     `
+  }
+
+  returnObject() :object {
+    return {id: this.id, 
+      withinTeam1: this.withinTeam1, 
+      withinTeam2: this.withinTeam2, 
+      withinTeam3: this.withinTeam3,
+      withinTD1: this.withinTD1,
+      withinTD2: this.withinTD2,
+      withinTD3: this.withinTD3,
+      outsideTD1: this.outsideTD1,
+      outsideTD2: this.outsideTD2,
+      outsideTD3: this.outsideTD3
+     }
   }
 }
 
