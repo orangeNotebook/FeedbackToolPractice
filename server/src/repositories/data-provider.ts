@@ -21,6 +21,7 @@ export default function getData() :object {
 //     let BehaviourObjects = teamBehaviours[i];
 //     BehaviourObjects[BehaviourObjects.id] = Behaviours;
 //   }
+deliveryGroup.save()
 
   return deliveryGroup.returnObject();
 }
