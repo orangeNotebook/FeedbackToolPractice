@@ -2,42 +2,45 @@ import express, {Request, Response} from "express"
 import main from "./index"
 import mongoose from "mongoose"
 import getData from "./repositories/data-provider"
-import models, {connectDb} from "./models"
-import { connect } from "http2"
+import models, { connectDb } from "./models"
 import Behaviour from "./models/behaviours"
+import BehaviourFinder from "./services/behaviour-finder"
+import bodyParser from "body-parser"
+import cors from "cors"
 
-
-
-
-
-
-const app = express();
+const app = express()
 const port = 4000;
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(cors())
 
-let behaviour
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+)
 
+let behaviourFinder
 
 app.get("/", (req: Request, res: Response) :void => {
-    res.render("index");
+    res.render("index")
 });
 
 app.get("/behaviours", (req: Request, res: Response) :void => {
-  res.send(main());
+  console.log("Got Here!")
+  // console.log(behaviourFinder.team)
+  res.send(behaviourFinder.team)
 });
 
-app.set("title", "Feedback Tool");
-app.set("view engine", "pug");
-app.set("views", "./out/views");
+app.set("title", "Feedback Tool")
+app.set("view engine", "pug")
+app.set("views", "./out/views")
 
-app.use(express.static("public"));
+app.use(express.static("public"))
 
 connectDb().then(async () => {
-  behaviour = new Behaviour
+  behaviourFinder = new BehaviourFinder()
+  app.listen(process.env.PORT, () =>
+  console.log(`Example app listening at http://localhost:${port}`))
 })
-
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});

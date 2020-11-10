@@ -66,7 +66,6 @@
 import mongoose, { Document } from "mongoose"
 
 export interface IBehaviour extends Document {
-  id: number;
   withinTeam1: string;
   withinTeam2: string;
   withinTeam3: string;
@@ -80,12 +79,6 @@ export interface IBehaviour extends Document {
 
 const behaviourSchema = new mongoose.Schema(
   {
-    id: {
-      type: Number,
-      unique: true,
-      required: true
-    
-    },
     withinTeam1: {
       type: String,
       unique: false,
