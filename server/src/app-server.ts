@@ -30,8 +30,11 @@ app.get("/", (req: Request, res: Response) :void => {
 app.get("/behaviours", (req: Request, res: Response) :void => {
   console.log("Got Here!")
   // console.log(behaviourFinder.team)
-  res.send(behaviourFinder.team)
+  res.send({data: "This is a test"})
 });
+
+app.get("/test", (req: Request, res: Response) :void => {
+  console.log("Got to /test")})
 
 app.set("title", "Feedback Tool")
 app.set("view engine", "pug")
@@ -40,7 +43,7 @@ app.set("views", "./out/views")
 app.use(express.static("public"))
 
 connectDb().then(async () => {
-  behaviourFinder = new BehaviourFinder()
+  behaviourFinder = new BehaviourFinder
   app.listen(process.env.PORT, () =>
   console.log(`Example app listening at http://localhost:${port}`))
 })

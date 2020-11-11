@@ -31,76 +31,64 @@ interface IBehaviours {
 
 
 class Behaviours extends Component {
-state = {
-    id: null,
-    withinTeam1: null,
-    withinTeam2: null,
-    withinTeam3: null,
-    withinTD1: null,
-    withinTD2: null,
-    withinTD3: null,
-    outsideTD1: null,
-    outsideTD2: null,
-    outsideTD3: null,
-  };
+  state = {
+    data: null
+    };
 
   componentDidMount() {
-      // Call our fetch function below once the component mounts
-    this.callBackendAPI().then(res => this.setState({id: res.id,
-        withinTeam1: res.withinTeam1,
-        withinTeam2: res.withinTeam2,
-        withinTeam3: res.withinTeam3,
-        withinTD1: res.withinTD1,
-        withinTD2: res.withinTD2,
-        withinTD3: res.withinTD3,
-        outsideTD1: res.outsideTD1,
-        outsideTD2: res.outsideTD2,
-        outsideTD3: res.outsideTD3 })).catch(err => console.log(err));
-  }
-    // Fetches our GET route from the Express server. Note the route we are fetching matches the GET route from server.js
-  callBackendAPI = async () => {
-    const response = await fetch('/behaviours');
-    const body = await response.json();
+    // Call our fetch function below once the component mounts
+  this.callBackendAPI()
+    .then(res => this.setState({ data: res.express }))
+    .catch(err => console.log(err));
+}
+  // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
+callBackendAPI = async () => {
+  const response = await fetch('/behaviours');
+  const body = await response.json();
 
-    if (response.status !== 200) {
-      throw Error(body.message) 
-    }
-    return body;
-  };
+  if (response.status !== 200) {
+    throw Error(body.message) 
+  }
+  return body;
+};
+
 
   render() {
     return (
-      <GridContainer>
-        <GridItem>
-           {this.state.withinTeam1}
-        </GridItem>
-        <GridItem>
-            {this.state.withinTeam2}
-        </GridItem>
-        <GridItem>
-           {this.state.withinTeam3}
-        </GridItem>
-        <GridItem>
-          {this.state.withinTD1}
-        </GridItem>
-        <GridItem>
-            {this.state.withinTD2}
-        </GridItem>
-        <GridItem>
-           {this.state.withinTD3}
-        </GridItem>
-        <GridItem>
-           {this.state.outsideTD1}
-        </GridItem>
-        <GridItem>
-          {this.state.outsideTD2}
-        </GridItem>
-        <GridItem>
-            {this.state.outsideTD3}
-        </GridItem>
+      // <GridContainer>
+      //   <GridItem>
+      //      {this.state.data[0]}
+      //   </GridItem>
+      //   <GridItem>
+      //       {this.state.data[1]}
+      //   </GridItem>
+      //   <GridItem>
+      //      {this.state.data[2]}
+      //   </GridItem>
+      //   <GridItem>
+      //     {this.state.data[3]}
+      //   </GridItem>
+      //   <GridItem>
+      //       {this.state.data[4]}
+      //   </GridItem>
+      //   <GridItem>
+      //      {this.state.data[5]}
+      //   </GridItem>
+      //   <GridItem>
+      //      {this.state.data[6]}
+      //   </GridItem>
+      //   <GridItem>
+      //     {this.state.data[7]}
+      //   </GridItem>
+      //   <GridItem>
+      //       {this.state.data[8]}
+      //   </GridItem>
 
         
-      </GridContainer>
+      // </GridContainer>
+      <div>
+        <p>{this.state.data}</p>
+        </div>
     );
   }
 }
