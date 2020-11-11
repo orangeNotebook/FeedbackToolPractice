@@ -70,36 +70,85 @@ callBackendAPI = async () => {
   return body;
 };
 
+handleClick(){
+  console.log("Clicked")
+}
+
 
   render() {
     return (
       <GridContainer>
         <GridItem>
            {this.state.withinTeam1}
+           <div>
+           <button type ="button" onClick={this.handleClick}>
+            Click for more Info
+          </button>
+          </div>
         </GridItem>
         <GridItem>
             {this.state.withinTeam2}
+            <div>
+           <button type ="button" onClick={this.handleClick}>
+            Click for more Info
+          </button>
+          </div>
         </GridItem>
         <GridItem>
            {this.state.withinTeam3}
+           <div>
+           <button type ="button" onClick={this.handleClick}>
+            Click for more Info
+          </button>
+          </div>
         </GridItem>
         <GridItem>
           {this.state.withinTD1}
+          <div>
+           <button type ="button" onClick={this.handleClick}>
+            Click for more Info
+          </button>
+          </div>
         </GridItem>
         <GridItem>
             {this.state.withinTD2}
+            <div>
+           <button type ="button" onClick={this.handleClick}>
+            Click for more Info
+          </button>
+          </div>
         </GridItem>
         <GridItem>
            {this.state.withinTD3}
+           <div>
+           <button type ="button" onClick={this.handleClick}>
+            Click for more Info
+          </button>
+          </div>
         </GridItem>
         <GridItem>
            {this.state.outsideTD1}
+           <div>
+           <button type ="button" onClick={this.handleClick}>
+            Click for more Info
+          </button>
+          </div>
         </GridItem>
         <GridItem>
           {this.state.outsideTD2}
+          <div>
+           <button type ="button" onClick={this.handleClick}>
+            Click for more Info
+          </button>
+          </div>
         </GridItem>
         <GridItem>
           {this.state.outsideTD3}
+          <div>
+           <button type ="button" onClick={this.handleClick}>
+            Click for more Info
+          </button>
+          </div>
         </GridItem>
 
         
