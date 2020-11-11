@@ -29,12 +29,11 @@ app.get("/", (req: Request, res: Response) :void => {
 
 app.get("/behaviours", (req: Request, res: Response) :void => {
   console.log("Got Here!")
-  console.log(behaviourFinder.team)
+  // console.log(behaviourFinder.team)
+  res.send(behaviourFinder.team[0])
   // res.send({data: "This is a test"})
 });
 
-app.get("/test", (req: Request, res: Response) :void => {
-  console.log("Got to /test")})
 
 app.set("title", "Feedback Tool")
 app.set("view engine", "pug")
