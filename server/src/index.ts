@@ -1,3 +1,5 @@
-export default () :string => {
-    return "Hello world"
+import behavioursData from "./repositories/data-provider"
+
+export default () :object => {
+    return behavioursData()
 }
