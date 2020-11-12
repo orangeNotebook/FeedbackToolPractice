@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from "styled-components"
-import TestNavigation from '../Test-Navigation/TestNavigation';
+import BehaviourFeedback from '../Behaviour-Feedback/BehaviourFeedback';
+import { BrowserRouter, Route, Switch, Link, pathname } from 'react-router-dom';
 
 const GridContainer = styled.div`
 display: grid;
@@ -71,84 +72,68 @@ callBackendAPI = async () => {
   return body;
 };
 
-handleClick(){
-  return TestNavigation
-}
-
-
   render() {
     return (
       <GridContainer>
         <GridItem>
-           {this.state.withinTeam1}
-           <div>
-           <button type ="button" onClick={this.handleClick}>
-            Click for more Info
-          </button>
+          {this.state.withinTeam1}
+          <div>
+
+           <Link to={{
+             pathname: "/BehaviourFeedback",
+             state: {
+               behaviour: this.state.withinTeam1
+           }}}> <button type= "button">Click here for more info</button></Link>
+
+
           </div>
         </GridItem>
         <GridItem>
             {this.state.withinTeam2}
-            <div>
-           <button type ="button" onClick={this.handleClick}>
-            Click for more Info
-          </button>
+          <div>
+           <Link to="/BehaviourFeedback"> <button type= "button">Click here for more info</button></Link>
           </div>
         </GridItem>
         <GridItem>
            {this.state.withinTeam3}
-           <div>
-           <button type ="button" onClick={this.handleClick}>
-            Click for more Info
-          </button>
+          <div>
+           <Link to="/BehaviourFeedback"> <button type= "button">Click here for more info</button></Link>
           </div>
         </GridItem>
         <GridItem>
           {this.state.withinTD1}
           <div>
-           <button type ="button" onClick={this.handleClick}>
-            Click for more Info
-          </button>
+           <Link to="/BehaviourFeedback"> <button type= "button">Click here for more info</button></Link>
           </div>
         </GridItem>
         <GridItem>
             {this.state.withinTD2}
-            <div>
-           <button type ="button" onClick={this.handleClick}>
-            Click for more Info
-          </button>
+          <div>
+           <Link to="/BehaviourFeedback"> <button type= "button">Click here for more info</button></Link>
           </div>
         </GridItem>
         <GridItem>
            {this.state.withinTD3}
-           <div>
-           <button type ="button" onClick={this.handleClick}>
-            Click for more Info
-          </button>
+          <div>
+           <Link to="/BehaviourFeedback"> <button type= "button">Click here for more info</button></Link>
           </div>
         </GridItem>
         <GridItem>
            {this.state.outsideTD1}
-           <div>
-           <button type ="button" onClick={this.handleClick}>
-            Click for more Info
-          </button>
+          <div>
+           <Link to="/BehaviourFeedback"> <button type= "button">Click here for more info</button></Link>
           </div>
         </GridItem>
         <GridItem>
           {this.state.outsideTD2}
           <div>
-           <button type ="button" onClick={this.handleClick}>
-            Click for more Info
-          </button>
+           <Link to="/BehaviourFeedback"> <button type= "button">Click here for more info</button></Link>
           </div>
         </GridItem>
         <GridItem>
           {this.state.outsideTD3}
           <div>
-           <button type ="button" onClick={this.handleClick}>
-            Click for more Info
-          </button>
+           <Link to="/BehaviourFeedback"> <button type= "button">Click here for more info</button></Link>
           </div>
         </GridItem>
 
