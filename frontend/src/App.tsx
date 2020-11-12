@@ -3,6 +3,7 @@ import "./App.css";
 import Behaviours from "./components/Behaviours/behaviours"
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from "./components/Home/Home"
+import TestNavigation from "./components/Test-Navigation/TestNavigation";
 
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
       <div>
           <Switch>
            <Route path="/" component={Home} exact/>
+ 
           <Route component={Error}/>
          </Switch>
       </div> 

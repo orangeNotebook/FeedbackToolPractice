@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from "styled-components"
+import TestNavigation from '../Test-Navigation/TestNavigation';
 
 const GridContainer = styled.div`
 display: grid;
@@ -71,7 +72,7 @@ callBackendAPI = async () => {
 };
 
 handleClick(){
-  console.log("Clicked")
+  return TestNavigation
 }
 
 
