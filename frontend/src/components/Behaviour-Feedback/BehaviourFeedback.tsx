@@ -33,14 +33,22 @@ interface IBehaviour {
 }
 
 
-const BehaviourFeedback: React.FC<IBehaviour> = (props) => {
-    return (
-       <div>
-        <p>
-            Behaviour: {props.behaviour}
-        </p>
-      </div>
-    );
-}
- 
+// const BehaviourFeedback: React.FC<IBehaviour> = (props) => {
+//     return (
+//        <div>
+//         <p>
+//             Behaviour: {props.behaviour}
+//         </p>
+//       </div>
+//     );
+// }
+const BehaviourFeedback = ({match:{params:{parseBehaviour}}}) => (
+  // props.match.params.name
+  <div>
+    <h1> {parseBehaviour}</h1>
+    {/* <FakeText /> */}
+  </div>
+);
+
 export default BehaviourFeedback;
+
