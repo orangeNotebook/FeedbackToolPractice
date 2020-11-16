@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import styled from "styled-components"
+import BehaviourFeedback from '../Behaviour-Feedback/BehaviourFeedback';
+import { BrowserRouter, Route, Switch, Link, pathname } from 'react-router-dom';
 
 const GridContainer = styled.div`
 display: grid;
@@ -70,36 +72,63 @@ callBackendAPI = async () => {
   return body;
 };
 
-
   render() {
     return (
       <GridContainer>
         <GridItem>
-           {this.state.withinTeam1}
+          {this.state.withinTeam1}
+          <div>
+          {/* {`/about/${test}`} */}
+           <Link to={`/BehaviourFeedback/${this.state.withinTeam1}`}> <button type= "button">Click here for more info</button></Link>
+          </div>
         </GridItem>
         <GridItem>
             {this.state.withinTeam2}
+          <div>
+          <Link to={`/BehaviourFeedback/${this.state.withinTeam2}`}> <button type= "button">Click here for more info</button></Link>
+          </div>
         </GridItem>
         <GridItem>
            {this.state.withinTeam3}
+          <div>
+          <Link to={`/BehaviourFeedback/${this.state.withinTeam3}`}> <button type= "button">Click here for more info</button></Link>
+          </div>
         </GridItem>
         <GridItem>
           {this.state.withinTD1}
+          <div>
+          <Link to={`/BehaviourFeedback/${this.state.withinTD1}`}> <button type= "button">Click here for more info</button></Link>
+          </div>
         </GridItem>
         <GridItem>
             {this.state.withinTD2}
+          <div>
+          <Link to={`/BehaviourFeedback/${this.state.withinTD2}`}> <button type= "button">Click here for more info</button></Link>
+          </div>
         </GridItem>
         <GridItem>
            {this.state.withinTD3}
+          <div>
+          <Link to={`/BehaviourFeedback/${this.state.withinTD3}`}> <button type= "button">Click here for more info</button></Link>
+          </div>
         </GridItem>
         <GridItem>
            {this.state.outsideTD1}
+          <div>
+          <Link to={`/BehaviourFeedback/${this.state.outsideTD1}`}> <button type= "button">Click here for more info</button></Link>
+          </div>
         </GridItem>
         <GridItem>
           {this.state.outsideTD2}
+          <div>
+          <Link to={`/BehaviourFeedback/${this.state.outsideTD2}`}> <button type= "button">Click here for more info</button></Link>
+          </div>
         </GridItem>
         <GridItem>
           {this.state.outsideTD3}
+          <div>
+          <Link to={`/BehaviourFeedback/${this.state.outsideTD3}`}> <button type= "button">Click here for more info</button></Link>
+          </div>
         </GridItem>
 
         
