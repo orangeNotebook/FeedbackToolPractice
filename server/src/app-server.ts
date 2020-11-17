@@ -33,8 +33,20 @@ app.get("/behaviours", (req: Request, res: Response) :void => {
   res.send(behaviourFinder.team[0])
 });
 
-app.get("/behaviourfeedbacks", (req: Request, res: Response) :void => {
-  res.send(behaviourFeedbackFinder.team[0])
+app.post("/behaviourFeedbacks", (req: Request, res: Response) :void => {
+  let behaviourId = req.body.behaviour
+  let feedbackGroup = []
+  let feedbackArray = behaviourFeedbackFinder.allFeedback
+
+  for(let i = 0; i < feedbackArray.length; i++){
+
+    if(feedbackArray[i].behaviour == behaviourId){
+      
+      feedbackGroup.push(feedbackArray[i])
+    }
+  }
+
+  res.send(feedbackGroup)
 });
 
 app.set("title", "Feedback Tool")
