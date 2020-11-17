@@ -33,6 +33,10 @@ app.get("/behaviours", (req: Request, res: Response) :void => {
   res.send(behaviourFinder.team[0])
 });
 
+app.get("/behaviourfeedbacks", (req: Request, res: Response) :void => {
+  res.send(behaviourFeedbackFinder.team[0])
+});
+
 app.set("title", "Feedback Tool")
 app.set("view engine", "pug")
 app.set("views", "./out/views")

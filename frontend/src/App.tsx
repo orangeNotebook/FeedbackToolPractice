@@ -17,7 +17,7 @@ class App extends Component {
       <div>
           <Switch>
            <Route path="/" component={Home} exact/>
-           <Route path="/BehaviourFeedback/:parseBehaviour" component={BehaviourFeedback} exact/>
+           <Route path="/BehaviourFeedback/:parseBehaviour/:id" component={BehaviourFeedback} exact/>
           <Route component={Error}/>
          </Switch>
       </div> 
