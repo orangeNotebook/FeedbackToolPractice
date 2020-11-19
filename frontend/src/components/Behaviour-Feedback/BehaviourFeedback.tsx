@@ -7,7 +7,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 
 const BehaviourFeedback = ({match:{params:{parseBehaviour, id}}}) => {
-  let feedback = []
+
+  let [responseData, setResponseData] = React.useState([])
 
   Axios({
     method: "POST",
@@ -17,14 +18,17 @@ const BehaviourFeedback = ({match:{params:{parseBehaviour, id}}}) => {
       "Content-Type": "application/json"
     }
   }).then(res => {
+    let feedback = []
     feedback = res.data
     console.log(res.data)
+    setResponseData(feedback) //hth am i supposed to get this 
   })
 
+  
   return(
   <div>
     <h1> {parseBehaviour} </h1>
-    <p> {feedback} </p>
+    {responseData.map((response) => <li>{response}</li>)}
   </div>
 )};
 
