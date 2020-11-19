@@ -53,6 +53,7 @@ class Behaviours extends Component {
        withinTeam2: res.withinTeam2,
        withinTeam3: res.withinTeam3,
        withinTD1: res.withinTD1,
+       
        withinTD2: res.withinTD2,
        withinTD3: res.withinTD3,
        outsideTD1: res.outsideTD1,
