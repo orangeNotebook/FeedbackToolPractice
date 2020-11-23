@@ -45,8 +45,8 @@ app.post("/behaviourFeedbacks", (req: Request, res: Response) :void => {
       feedbackGroup.push(feedbackArray[i])
     }
   }
-
-  res.send(feedbackGroup)
+  let feedbackObject = {feedback: feedbackGroup}
+  res.send(feedbackObject)
 });
 
 app.set("title", "Feedback Tool")
