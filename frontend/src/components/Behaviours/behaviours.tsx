@@ -53,6 +53,7 @@ class Behaviours extends Component {
        withinTeam2: res.withinTeam2,
        withinTeam3: res.withinTeam3,
        withinTD1: res.withinTD1,
+       
        withinTD2: res.withinTD2,
        withinTD3: res.withinTD3,
        outsideTD1: res.outsideTD1,
@@ -78,56 +79,55 @@ callBackendAPI = async () => {
         <GridItem>
           {this.state.withinTeam1}
           <div>
-          {/* {`/about/${test}`} */}
-           <Link to={`/BehaviourFeedback/${this.state.withinTeam1}`}> <button type= "button">Click here for more info</button></Link>
+           <Link to={`/BehaviourFeedback/${this.state.withinTeam1}/1`}> <button type= "button">Click here for more info</button></Link>
           </div>
         </GridItem>
         <GridItem>
             {this.state.withinTeam2}
           <div>
-          <Link to={`/BehaviourFeedback/${this.state.withinTeam2}`}> <button type= "button">Click here for more info</button></Link>
+          <Link to={`/BehaviourFeedback/${this.state.withinTeam2}/2`}> <button type= "button">Click here for more info</button></Link>
           </div>
         </GridItem>
         <GridItem>
            {this.state.withinTeam3}
           <div>
-          <Link to={`/BehaviourFeedback/${this.state.withinTeam3}`}> <button type= "button">Click here for more info</button></Link>
+          <Link to={`/BehaviourFeedback/${this.state.withinTeam3}/3`}> <button type= "button">Click here for more info</button></Link>
           </div>
         </GridItem>
         <GridItem>
           {this.state.withinTD1}
           <div>
-          <Link to={`/BehaviourFeedback/${this.state.withinTD1}`}> <button type= "button">Click here for more info</button></Link>
+          <Link to={`/BehaviourFeedback/${this.state.withinTD1}/4`}> <button type= "button">Click here for more info</button></Link>
           </div>
         </GridItem>
         <GridItem>
             {this.state.withinTD2}
           <div>
-          <Link to={`/BehaviourFeedback/${this.state.withinTD2}`}> <button type= "button">Click here for more info</button></Link>
+          <Link to={`/BehaviourFeedback/${this.state.withinTD2}/5`}> <button type= "button">Click here for more info</button></Link>
           </div>
         </GridItem>
         <GridItem>
            {this.state.withinTD3}
           <div>
-          <Link to={`/BehaviourFeedback/${this.state.withinTD3}`}> <button type= "button">Click here for more info</button></Link>
+          <Link to={`/BehaviourFeedback/${this.state.withinTD3}/6`}> <button type= "button">Click here for more info</button></Link>
           </div>
         </GridItem>
         <GridItem>
            {this.state.outsideTD1}
           <div>
-          <Link to={`/BehaviourFeedback/${this.state.outsideTD1}`}> <button type= "button">Click here for more info</button></Link>
+          <Link to={`/BehaviourFeedback/${this.state.outsideTD1}/7`}> <button type= "button">Click here for more info</button></Link>
           </div>
         </GridItem>
         <GridItem>
           {this.state.outsideTD2}
           <div>
-          <Link to={`/BehaviourFeedback/${this.state.outsideTD2}`}> <button type= "button">Click here for more info</button></Link>
+          <Link to={`/BehaviourFeedback/${this.state.outsideTD2}/8`}> <button type= "button">Click here for more info</button></Link>
           </div>
         </GridItem>
         <GridItem>
           {this.state.outsideTD3}
           <div>
-          <Link to={`/BehaviourFeedback/${this.state.outsideTD3}`}> <button type= "button">Click here for more info</button></Link>
+          <Link to={`/BehaviourFeedback/${this.state.outsideTD3}/9`}> <button type= "button">Click here for more info</button></Link>
           </div>
         </GridItem>
 

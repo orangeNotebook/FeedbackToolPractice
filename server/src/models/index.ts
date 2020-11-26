@@ -1,5 +1,6 @@
 import mongoose from "mongoose"
 import Behaviours from "./behaviours"
+import BehaviourFeedback from "./behaviourFeedback"
 
 const connectDb = () => {
     return mongoose.connect("mongodb://localhost:27017/feedback-tool",{
@@ -8,7 +9,7 @@ const connectDb = () => {
     })
 }
 
-const models = { Behaviours }
+const models = { Behaviours, BehaviourFeedback }
 
 export { connectDb }
 
